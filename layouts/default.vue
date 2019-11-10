@@ -3,7 +3,6 @@
     <app-header />
     <main>
       <nuxt class="content" />
-      <block-form-contact />
     </main>
     <error-handler />
     <app-footer />
@@ -14,14 +13,12 @@
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import ErrorHandler from '@/components/ErrorHandler.vue'
-import BlockFormContact from '@/components/blocks/BlockFormContact.vue'
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-    ErrorHandler,
-    BlockFormContact
+    ErrorHandler
   }
 }
 </script>

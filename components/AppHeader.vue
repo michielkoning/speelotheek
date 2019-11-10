@@ -20,7 +20,6 @@
           <transition name="fade">
             <div v-show="showMenu" ref="bg" class="content">
               <main-navigation />
-              <app-usps class="usps" />
             </div>
           </transition>
         </div>
@@ -33,7 +32,6 @@
 <script>
 import SkipLinks from '@/components/SkipLinks.vue'
 import MainNavigation from '@/components/MainNavigation.vue'
-import AppUsps from '@/components/AppUsps.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
 import IconLogo from '@/assets/icons/logo.svg'
 import IconTriangle from '@/assets/icons/triangle.svg'
@@ -46,7 +44,6 @@ export default {
     SkipLinks,
     MainNavigation,
     MobileNavigation,
-    AppUsps,
     IconLogo,
     IconTriangle,
     IconHeaderBow
