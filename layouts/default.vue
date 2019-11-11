@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue'
-import AppFooter from '@/components/AppFooter.vue'
-import ErrorHandler from '@/components/ErrorHandler.vue'
+import AppHeader from '@/components/layout/AppHeader.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
+import ErrorHandler from '@/components/layout/ErrorHandler.vue'
 
 export default {
   components: {

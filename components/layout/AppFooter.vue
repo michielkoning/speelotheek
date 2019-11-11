@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import NotchWrapper from '@/components/NotchWrapper.vue'
+import NotchWrapper from '@/components/layout/NotchWrapper.vue'
 import SocialLinks from '@/components/SocialLinks.vue'
 import CompanyAddress from '@/components/CompanyAddress.vue'
 

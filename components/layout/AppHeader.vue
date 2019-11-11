@@ -8,8 +8,6 @@
         <span class="sr-only">{{ $t('address.companyName') }}</span>
       </nuxt-link>
 
-      <icon-header-bow aria-hidden="true" class="header-bow" />
-
       <transition
         name="fade2"
         @after-enter="afterEnter"
@@ -25,7 +23,6 @@
         </div>
       </transition>
     </div>
-    <icon-triangle class="triangle" aria-hidden="true" />
   </header>
 </template>
 
@@ -34,8 +31,6 @@ import SkipLinks from '@/components/SkipLinks.vue'
 import MainNavigation from '@/components/MainNavigation.vue'
 import MobileNavigation from '@/components/MobileNavigation.vue'
 import IconLogo from '@/assets/icons/logo.svg'
-import IconTriangle from '@/assets/icons/triangle.svg'
-import IconHeaderBow from '@/assets/icons/header-bow.svg'
 
 const bodyScrollLock = require('body-scroll-lock')
 
@@ -44,9 +39,8 @@ export default {
     SkipLinks,
     MainNavigation,
     MobileNavigation,
-    IconLogo,
-    IconTriangle,
-    IconHeaderBow
+    IconLogo
+
   },
   data () {
     return {
@@ -78,24 +72,6 @@ export default {
 header {
   background: var(--color-primary);
   position: relative;
-  @media (--show-full-navigation) {
-    background: linear-gradient(
-      90deg,
-      transparent 50%,
-      var(--color-primary) 50%
-    );
-
-    &::after {
-      position: absolute;
-      display: block;
-      content: '';
-      width: 50%;
-      right: 0;
-      top: 0;
-      height: 50%;
-      background: var(--color-primary-dark);
-    }
-  }
 }
 
 .header-wrapper {
@@ -120,10 +96,6 @@ header {
     max-height: none;
     justify-content: space-around;
     flex: 1 0 auto;
-    background: linear-gradient(
-      var(--color-primary-dark) 50%,
-      var(--color-primary) 50%
-    );
   }
 }
 
@@ -191,26 +163,4 @@ header {
   }
 }
 
-.triangle {
-  display: none;
-  @media (--viewport-lg) {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 20em;
-    width: 10vw;
-    height: auto;
-  }
-}
-
-.header-bow {
-  flex: 1 0 auto;
-  fill: var(--color-primary);
-  display: none;
-  width: 15vw;
-  max-width: 13em;
-  @media (--show-full-navigation) {
-    display: block;
-  }
-}
 </style>

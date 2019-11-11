@@ -25,7 +25,7 @@ export default {
 
       {
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap',
+          'https://fonts.googleapis.com/css?family=Amatic+SC&display=swap',
         rel: 'stylesheet'
       }
     ]
