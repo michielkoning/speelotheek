@@ -1,7 +1,8 @@
 <template>
   <div>
-    home
-    <ul>
+    <input v-model="search" type="search" @keyup="searchFor">
+    {{ search }}
+    <ul v-if="toys.length">
       <li v-for="toy in toys" :key="toy.title">
         {{ toy.title }} - {{ toy.category }}
       </li>
@@ -16,6 +17,17 @@ export default {
     const toys = await axios.get('http://localhost:3000/toys.json')
     return {
       toys: toys.data
+    }
+  },
+  data () {
+    return {
+      search: 'a'
+    }
+  },
+  methods: {
+    searchFor () {
+      window.console.log('aa')
+      this.toys = []
     }
   },
   head () {
