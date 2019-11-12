@@ -1,7 +1,6 @@
 <template>
   <div>
-    <input v-model="search" type="search" @keyup="searchFor">
-    {{ search }}
+    <input v-model="search" type="search" @input="searchFor">
     <ul v-if="toys.length">
       <li v-for="toy in toys" :key="toy.title">
         {{ toy.title }} - {{ toy.category }}
@@ -14,20 +13,25 @@
 import axios from 'axios'
 export default {
   async asyncData () {
-    const toys = await axios.get('http://localhost:3000/toys.json')
+    const allToys = await axios.get('http://localhost:3000/toys.json')
     return {
-      toys: toys.data
+      allToys: allToys.data
     }
   },
   data () {
     return {
-      search: 'a'
+      search: '',
+      toys: []
     }
+  },
+  mounted () {
+    this.toys = this.allToys || []
   },
   methods: {
     searchFor () {
-      window.console.log('aa')
-      this.toys = []
+      this.toys = this.allToys.filter(item =>
+        item.title.toLowerCase().includes(this.search.toLowerCase())
+      )
     }
   },
   head () {

@@ -6,7 +6,7 @@
   "author": "Michiel Koning",
   "scripts": {
     "build": "nuxt build",
-    "test": "jest",
+    "test": "jest --watch",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "dev": "nuxt",
     "generate": "nuxt generate",

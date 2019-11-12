@@ -62,7 +62,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
     '@nuxtjs/axios',
-    '@nuxtjs/google-analytics'
+    // '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
@@ -70,18 +70,18 @@ export default {
   axios: {
     baseURL: baseUrl
   },
-  googleAnalytics: {
-    id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,
-    set: [{ field: 'anonymizeIp', value: true }],
-    disabled: () => {
-      const doNotTrack =
-        navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack
-      if (doNotTrack !== '1' && doNotTrack !== 'yes') {
-        return false
-      }
-      return true
-    }
-  },
+  // googleAnalytics: {
+  //   id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,
+  //   set: [{ field: 'anonymizeIp', value: true }],
+  //   disabled: () => {
+  //     const doNotTrack =
+  //       navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack
+  //     if (doNotTrack !== '1' && doNotTrack !== 'yes') {
+  //       return false
+  //     }
+  //     return true
+  //   }
+  // },
   /*
    ** Build configuration
    */
