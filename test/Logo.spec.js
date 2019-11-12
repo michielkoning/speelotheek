@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import axios from 'axios'
-import Logo from '@/pages/index.vue'
+import Logo from '@/pages/toys.vue'
 
 let wrapper
 jest.mock('axios')

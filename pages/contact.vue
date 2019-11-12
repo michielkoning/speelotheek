@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>{{ text.title }}</h1>
-    {{ text.body }}
+    <!-- eslint-disable-next-line -->
+    <div v-html="$md.render(text.body)" />
   </div>
 </template>
 
