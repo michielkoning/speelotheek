@@ -26,13 +26,17 @@ collections:
         name: "home"
         format: 'json'
         file: "assets/content/pages/nl/home.json"
+        editor:
+          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
       - label: "Contact"
-        name: "contact-nl"
+        name: "contact"
         format: 'json'
         file: "assets/content/pages/nl/contact.json"
+        editor:
+          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
@@ -43,13 +47,17 @@ collections:
         name: "home"
         format: 'json'
         file: "assets/content/pages/en/home.json"
+        editor:
+          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
       - label: "Contact"
-        name: "contact-en"
+        name: "contact"
         format: 'json'
         file: "assets/content/pages/en/contact.json"
+        editor:
+          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
