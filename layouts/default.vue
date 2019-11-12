@@ -1,11 +1,11 @@
 <template>
   <div class="page">
-    <app-header class="sr-only" />
+    <app-header />
     <main>
       <nuxt class="content" />
     </main>
     <error-handler />
-    <app-footer class="sr-only" />
+    <app-footer />
   </div>
 </template>
 

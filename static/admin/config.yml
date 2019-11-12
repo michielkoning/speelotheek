@@ -10,8 +10,8 @@ collections:
     label: 'Blog'
     format: 'json'
     folder: 'assets/content/blog'
-    create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true
     editor:
       preview: false
     fields:
@@ -19,22 +19,22 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "About Page in Dutch"
-        filter: {field: "language", value: "nl"}
-        name: "about-nl"
-        file: "assets/content/nl/about.json"
-        format: 'json'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: "About Page in English"
-        filter: {field: "language", value: "en"}
-        name: "about-en"
-        file: "assets/content/en/about.json"
-        format: 'json'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: "Pages en"
+    create: true
+    filter: {field: "language", value: "nl"}
+    name: "page-nl"
+    folder: "assets/content"
+    format: 'json'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: "Pages nl"
+    create: true
+    filter: {field: "language", value: "en"}
+    name: "page-en"
+    folder: "assets/content"
+    format: 'json'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
