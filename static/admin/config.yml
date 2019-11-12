@@ -19,20 +19,37 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-  - label: "Pages"
+  - label: "Pages (nl)"
     name: "pages"
     files:
-      - label: "Home (nl)"
+      - label: "Home"
         name: "home-nl"
         format: 'json'
         file: "assets/content/pages/nl/home.json"
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
-      - label: "Home (en)"
+      - label: "Contact"
+        name: "contact-nl"
+        format: 'json'
+        file: "assets/content/pages/nl/contact.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
+  - label: "Pages (en)"
+    name: "pages"
+    files:
+      - label: "Home"
         name: "home-en"
         format: 'json'
         file: "assets/content/pages/en/home.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
+      - label: "Contact"
+        name: "contact-en"
+        format: 'json'
+        file: "assets/content/pages/en/contact.json"
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
