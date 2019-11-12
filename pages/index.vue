@@ -1,17 +1,17 @@
 <template>
   <div>
     <input v-model="search" type="search" @input="searchFor">
-    <ul v-if="toys.length">
-      <li v-for="toy in toys" :key="toy.title">
-        {{ toy.title }} - {{ toy.category }}
-      </li>
-    </ul>
+    <toys-list :toys="toys" />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import ToysList from '@/components/toys/ToysList.vue'
 export default {
+  components: {
+    ToysList
+  },
   async asyncData () {
     const allToys = await axios.get('http://localhost:3000/toys.json')
     return {
