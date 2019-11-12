@@ -23,7 +23,7 @@ collections:
     name: "pages-nl"
     files:
       - label: "Home"
-        name: "home-nl"
+        name: "home"
         format: 'json'
         file: "assets/content/pages/nl/home.json"
         fields:
@@ -40,7 +40,7 @@ collections:
     name: "pages-en"
     files:
       - label: "Home"
-        name: "home-en"
+        name: "home"
         format: 'json'
         file: "assets/content/pages/en/home.json"
         fields:
