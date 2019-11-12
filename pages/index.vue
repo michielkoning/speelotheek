@@ -36,7 +36,8 @@ export default {
   },
   head () {
     return {
-      title: this.$t('pages.home.title')
+      title: this.$t('pages.home.title'),
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
     }
   }
 }
