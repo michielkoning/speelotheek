@@ -40,13 +40,18 @@ beforeEach(() => {
 
 describe('Logo', () => {
   describe('searchFor', () => {
-    it('searchFor', () => {
+    it('finds toys when the searchterm starts with the title of a toy', () => {
       wrapper.vm.search = 'Aankleed'
       wrapper.vm.searchFor()
       expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
     })
-    it('searchFor', () => {
+    it('finds toys when the searchterm starts with the title of a toy case insensitive', () => {
       wrapper.vm.search = 'aankleed'
+      wrapper.vm.searchFor()
+      expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
+    })
+    it('finds toys when the searchterm includes letters of a title of a toy in the middle of the searchterm', () => {
+      wrapper.vm.search = 'kleed'
       wrapper.vm.searchFor()
       expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
     })

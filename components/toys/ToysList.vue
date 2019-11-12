@@ -1,5 +1,5 @@
 <template>
-  <ul v-if="toys.length">
+  <ul v-if="toys.length" :class="$style.list">
     <toy-item v-for="toy in toys" :key="toy.title" :toy="toy" />
   </ul>
 </template>
@@ -18,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" module>
+.list {
+  @mixin list-reset;
+}
+</style>
