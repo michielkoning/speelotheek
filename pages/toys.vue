@@ -2,7 +2,6 @@
   <div>
     <input v-model="search" type="search" @input="searchFor">
     <toys-list :toys="toys" />
-    <div v-html="$md.render(blogPosts[0].body)" />
   </div>
 </template>
 

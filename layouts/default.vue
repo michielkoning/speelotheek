@@ -19,6 +19,9 @@ export default {
     AppHeader,
     AppFooter,
     ErrorHandler
+  },
+  head () {
+    return this.$nuxtI18nSeo()
   }
 }
 </script>

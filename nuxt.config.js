@@ -1,5 +1,5 @@
 import pkg from './package'
-const baseUrl = 'https://turbosolutionseurope.com/'
+const baseUrl = 'https://www.speelotheekwageningen.nl/'
 
 export default {
   mode: 'universal',
@@ -70,6 +70,7 @@ export default {
     baseURL: baseUrl
   },
   i18n: {
+    baseUrl,
     strategy: 'prefix',
     defaultLocale: 'nl',
     locales: [
@@ -89,9 +90,7 @@ export default {
     ],
     lazy: true,
     langDir: 'locales/',
-    vueI18n: {
-      fallbackLocale: 'nl'
-    }
+    rootRedirect: 'nl'
   },
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,
