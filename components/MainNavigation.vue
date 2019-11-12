@@ -5,40 +5,12 @@
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link id="menu" to="/">
+        <nuxt-link id="menu" to="/home">
           <span class="title">{{ $t('pages.home.menuTitle') }}</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/get-to-know-us/">
-          <span class="title">
-            {{ $t('pages.getToKnowUs.menuTitle') }}
-          </span>
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/what-we-do/">
-          <span class="title">
-            {{ $t('pages.whatWeDo.menuTitle') }}
-          </span>
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/mobile-workshop/">
-          <span class="title">
-            {{ $t('pages.mobileWorkshop.menuTitle') }}
-          </span>
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/recommendations/">
-          <span class="title">
-            {{ $t('pages.recommendations.menuTitle') }}
-          </span>
-        </nuxt-link>
-      </li>
-      <li>
-        <nuxt-link to="/contact/">
+        <nuxt-link to="/contact">
           <span class="title">
             {{ $t('pages.contact.menuTitle') }}
           </span>

@@ -21,13 +21,13 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
   - label: "Pages (nl)"
     name: "pages-nl"
+    editor:
+      preview: false
     files:
       - label: "Home"
         name: "home"
         format: 'json'
         file: "assets/content/pages/nl/home.json"
-        editor:
-          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
@@ -35,20 +35,18 @@ collections:
         name: "contact"
         format: 'json'
         file: "assets/content/pages/nl/contact.json"
-        editor:
-          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
   - label: "Pages (en)"
     name: "pages-en"
+    editor:
+      preview: false
     files:
       - label: "Home"
         name: "home"
         format: 'json'
         file: "assets/content/pages/en/home.json"
-        editor:
-          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
@@ -56,8 +54,6 @@ collections:
         name: "contact"
         format: 'json'
         file: "assets/content/pages/en/contact.json"
-        editor:
-          preview: false
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}

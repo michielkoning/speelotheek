@@ -1,6 +1,7 @@
 <template>
   <div>
-    {{ text }}
+    <h1>{{ text.title }}</h1>
+    {{ text.body }}
   </div>
 </template>
 
@@ -12,31 +13,9 @@ export default {
       text
     }
   },
-  data () {
-    return {
-      search: '',
-      toys: []
-    }
-  },
-  computed: {
-    blogPosts () {
-      return this.$store.state.blogPosts
-    }
-  },
-  mounted () {
-    this.toys = this.allToys || []
-  },
-  methods: {
-    searchFor () {
-      this.toys = this.allToys.filter(item =>
-        item.title.toLowerCase().includes(this.search.toLowerCase())
-      )
-    }
-  },
   head () {
     return {
-      title: this.$t('pages.home.title'),
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+      title: this.text.title
     }
   }
 }
