@@ -20,7 +20,7 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
   - label: "Pages (nl)"
-    name: "pages"
+    name: "pages-nl"
     files:
       - label: "Home"
         name: "home-nl"
@@ -37,7 +37,7 @@ collections:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
   - label: "Pages (en)"
-    name: "pages"
+    name: "pages-en"
     files:
       - label: "Home"
         name: "home-en"
