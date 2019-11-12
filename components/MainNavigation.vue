@@ -5,12 +5,12 @@
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link id="menu" to="/home">
+        <nuxt-link :to="localePath('home')">
           <span class="title">{{ $t('pages.home.menuTitle') }}</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/contact">
+        <nuxt-link :to="localePath('contact')">
           <span class="title">
             {{ $t('pages.contact.menuTitle') }}
           </span>

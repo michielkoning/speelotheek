@@ -40,14 +40,11 @@ export default {
    ** Global CSS
    */
   css: ['~/styles/base.css'],
-  router: {
-    middleware: ['i18n']
-  },
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~/plugins/i18n.js',
     '~/plugins/axios',
     '~/plugins/vuelidate',
     '~/plugins/google-maps'
@@ -62,7 +59,8 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    'nuxt-i18n'
     // '@nuxtjs/google-analytics'
   ],
   /*
@@ -70,6 +68,30 @@ export default {
    */
   axios: {
     baseURL: baseUrl
+  },
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'nl',
+    locales: [
+      {
+        name: 'English',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.js'
+      },
+      {
+        name: 'Nederlands',
+        code: 'nl',
+        iso: 'nl-NL',
+        file: 'nl.js'
+      }
+
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    vueI18n: {
+      fallbackLocale: 'nl'
+    }
   },
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,
