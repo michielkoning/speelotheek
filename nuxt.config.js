@@ -62,6 +62,7 @@ export default {
     '@nuxtjs/sitemap',
     'nuxt-svg-loader',
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
     // '@nuxtjs/google-analytics'
   ],
   /*
@@ -121,5 +122,8 @@ export default {
   },
   sitemap: {
     hostname: baseUrl
+  },
+  markdownit: {
+    injected: true
   }
 }

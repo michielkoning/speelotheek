@@ -2,6 +2,7 @@
   <div>
     <input v-model="search" type="search" @input="searchFor">
     <toys-list :toys="toys" />
+    <div v-html="$md.render(blogPosts[0].body)" />
   </div>
 </template>
 
@@ -22,6 +23,11 @@ export default {
     return {
       search: '',
       toys: []
+    }
+  },
+  computed: {
+    blogPosts () {
+      return this.$store.state.blogPosts
     }
   },
   mounted () {
