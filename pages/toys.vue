@@ -7,22 +7,20 @@
 </template>
 
 <script>
-import axios from 'axios'
 import ToysList from '@/components/toys/ToysList.vue'
 export default {
   components: {
     ToysList
   },
   async asyncData () {
-    const allToys = await axios.get('https://priceless-hodgkin-a8eb9f.netlify.com/toys.json')
     return {
-      allToys: allToys.data
+      toys: await require(`~/assets/content/toys.json`)
     }
   },
   data () {
     return {
       search: '',
-      toys: []
+      allToys: []
     }
   },
   computed: {
@@ -31,7 +29,7 @@ export default {
     }
   },
   mounted () {
-    this.toys = this.allToys || []
+    this.allToys = this.toys || []
   },
   methods: {
     searchFor () {
@@ -42,8 +40,7 @@ export default {
   },
   head () {
     return {
-      title: this.$t('pages.home.title'),
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+      title: this.$t('pages.home.title')
     }
   }
 }

@@ -15,7 +15,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('speelgoed')">
+        <nuxt-link :to="localePath('toys')">
           <span class="title">speelgoed</span>
         </nuxt-link>
       </li>
@@ -31,6 +31,12 @@
           </span>
         </nuxt-link>
       </li>
+      <nuxt-link :to="switchLocalePath('en')">
+        EN
+      </nuxt-link>
+      <nuxt-link :to="switchLocalePath('nl')">
+        NL
+      </nuxt-link>
     </ul>
     <div
       class="arrow"

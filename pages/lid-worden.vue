@@ -7,8 +7,9 @@
 
 <script>
 export default {
-  async asyncData ({ params }) {
-    const text = await require(`~/assets/content/pages/nl/lid-worden.json`)
+  async asyncData ({ app }) {
+    const locale = app.i18n.locale
+    const text = await require(`~/assets/content/pages/${locale}/lid-worden.json`)
     return {
       text
     }
