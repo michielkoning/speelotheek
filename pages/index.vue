@@ -13,7 +13,7 @@ export default {
     ToysList
   },
   async asyncData () {
-    const allToys = await axios.get('http://localhost:3000/toys.json')
+    const allToys = await axios.get('https://priceless-hodgkin-a8eb9f.netlify.com/toys.json')
     return {
       allToys: allToys.data
     }
