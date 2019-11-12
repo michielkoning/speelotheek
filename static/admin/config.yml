@@ -19,18 +19,15 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-
-  - label: "English"
-    create: true
-    name: "pages-en"
-    folder: "assets/content/pages/en"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
-  - label: "Nederlands"
-    create: true
-    name: "pages-nl"
+  - label: "Home (nl)"
+    name: "home"
     folder: "assets/content/pages/nl"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Tekst", name: "body", widget: "markdown"}
+  - label: "Home (en)"
+    name: "home"
+    folder: "assets/content/pages/en"
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - {label: "Tekst", name: "body", widget: "markdown"}
