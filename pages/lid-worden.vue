@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData ({ params }) {
-    const text = await require(`~/assets/content/pages/nl/${params.slug}.json`)
+    const text = await require(`~/assets/content/pages/nl/lid-worden.json`)
     return {
       text
     }

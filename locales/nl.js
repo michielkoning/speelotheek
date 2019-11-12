@@ -1,4 +1,6 @@
 export default {
+  'home': 'home',
+  'contact': 'contact',
   'pages': {
     'home': {
       'menuTitle': 'Home',

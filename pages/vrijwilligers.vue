@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData ({ params }) {
-    const text = await require(`~/assets/content/pages/nl/home.json`)
+    const text = await require(`~/assets/content/pages/nl/vrijwilligers.json`)
     return {
       text
     }

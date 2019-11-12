@@ -38,6 +38,20 @@ collections:
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
+      - label: "Lid worden"
+        name: "lid-worden"
+        format: 'json'
+        file: "assets/content/pages/nl/lid-worden.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
+      - label: "Vrijwilligers"
+        name: "vrijwilligers"
+        format: 'json'
+        file: "assets/content/pages/nl/vrijwilligers.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
   - label: "Pages (en)"
     name: "pages-en"
     editor:
@@ -54,6 +68,20 @@ collections:
         name: "contact"
         format: 'json'
         file: "assets/content/pages/en/contact.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
+      - label: "Lid worden"
+        name: "lid-worden"
+        format: 'json'
+        file: "assets/content/pages/nl/lid-worden.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Tekst", name: "body", widget: "markdown"}
+      - label: "Vrijwilligers"
+        name: "vrijwilligers"
+        format: 'json'
+        file: "assets/content/pages/nl/vrijwilligers.json"
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}

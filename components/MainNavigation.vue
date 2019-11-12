@@ -5,8 +5,23 @@
     </h2>
     <ul ref="menu">
       <li>
-        <nuxt-link :to="localePath('home')">
+        <nuxt-link :to="localePath('index')">
           <span class="title">{{ $t('pages.home.menuTitle') }}</span>
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('lid-worden')">
+          <span class="title">lid worden</span>
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('speelgoed')">
+          <span class="title">speelgoed</span>
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link :to="localePath('vrijwilligers')">
+          <span class="title">vrijwilligers</span>
         </nuxt-link>
       </li>
       <li>
