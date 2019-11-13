@@ -1,41 +1,33 @@
 import { shallowMount } from '@vue/test-utils'
-import axios from 'axios'
 import Logo from '@/pages/toys.vue'
 
 let wrapper
-jest.mock('axios')
-
-const mockResponse = [
-  {
-    'title': '(T)weetjes Jacht memory 3 combi Puzzel',
-    'category': 'G'
-  },
-  {
-    'title': '3D puzzel',
-    'category': 'P'
-  },
-  {
-    'title': 'Aankleedpop',
-    'category': 'P'
-  },
-  {
-    'title': 'ABC -spel',
-    'category': 'F'
-  }
-]
 
 beforeEach(() => {
   wrapper = shallowMount(Logo, {
     data () {
       return {
-        'allToys': mockResponse
+        toys: [
+          {
+            title: '(T)weetjes Jacht memory 3 combi Puzzel',
+            category: 'G'
+          },
+          {
+            title: '3D puzzel',
+            category: 'P'
+          },
+          {
+            title: 'Aankleedpop',
+            category: 'P'
+          },
+          {
+            title: 'ABC -spel',
+            category: 'F'
+          }
+        ]
       }
     }
   })
-  axios.get = () =>
-    new Promise((resolve) => {
-      resolve(mockResponse)
-    })
 })
 
 describe('Logo', () => {
