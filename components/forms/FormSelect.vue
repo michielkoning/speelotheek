@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import FormField from '~/components/Forms/FormField.vue'
+import FormField from '~/components/forms/FormField.vue'
 import IconChevronDown from '@/assets/icons/chevron-down.svg'
 
 export default {
