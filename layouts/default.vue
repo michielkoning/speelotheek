@@ -1,8 +1,8 @@
 <template>
-  <div class="page">
+  <div :class="$style.page">
     <app-header />
-    <main>
-      <nuxt class="content" />
+    <main :class="$style.main">
+      <nuxt :class="$style.content" />
     </main>
     <error-handler />
     <app-footer />
@@ -26,9 +26,11 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-main {
+<style lang="postcss" module>
+.main {
+  @mixin center;
   padding-top: 3em;
+
   @media (--show-full-navigation) {
     padding-top: 0;
   }

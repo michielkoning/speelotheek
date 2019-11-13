@@ -46,6 +46,20 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
+      - label: "Speelgoed"
+        name: "toys"
+        format: 'json'
+        file: "assets/content/pages/nl/toys.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - label: Speelgoed
+            name: toys
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: "Beschrijving", name: "body", widget: "markdown"}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Categorie, name: category, widget: select, options: ["a", "b", "c"]}
   - label: "Pages (en)"
     name: "pages-en"
     editor:
@@ -86,3 +100,17 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
+      - label: "Speelgoed"
+        name: "toys"
+        format: 'json'
+        file: "assets/content/pages/en/toys.json"
+        fields:
+          - {label: "Titel", name: "title", widget: "string"}
+          - label: Speelgoed
+            name: toys
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: "Beschrijving", name: "body", widget: "markdown"}
+              - {label: Photo, name: photo, widget: image}
+              - {label: Categorie, name: category, widget: select, options: ["a", "b", "c"]}
