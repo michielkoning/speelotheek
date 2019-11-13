@@ -1,6 +1,6 @@
 <template>
   <fieldset>
-    <legend class="sr-only">
+    <legend>
       {{ title }}
     </legend>
     <div class="fields">

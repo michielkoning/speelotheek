@@ -1,70 +1,53 @@
 <template>
-  <div class="field">
-    <label ref="label" :for="id">{{ title }}</label>
+  <form-field
+    :id="id"
+    :error-message="errorMessage"
+    :title="title"
+    class="field"
+  >
     <input
       :id="id"
       v-bind="$attrs"
       :value="value"
-      @focus="setFocusClass"
-      @blur="setBlurClass"
+      :type="type"
+      :maxlength="maxlength"
       @input="$emit('input', $event.target.value)"
     >
-    <span aria-live="assertive">{{ errorMessage }}</span>
-  </div>
+  </form-field>
 </template>
 
 <script>
-import RandomProp from '~/mixins/random.js'
+import FormField from '~/components/Forms/FormField.vue'
 export default {
+  components: {
+    FormField
+  },
+  inheritAttrs: false,
   props: {
     title: {
       type: String,
       required: true
     },
-    id: RandomProp,
-    value: {
+    id: {
       type: String,
       required: true
     },
+    type: {
+      type: String,
+      default: 'text'
+    },
+    value: {
+      type: [String, Number],
+      required: true
+    },
+    maxlength: {
+      type: Number,
+      default: 50
+    },
     errorMessage: {
       type: String,
-      required: false,
-      default: ''
-    }
-  },
-  mounted () {
-    this.setClassWhenFilled()
-  },
-  methods: {
-    setClassWhenFilled () {
-      if (this.value) { this.$refs.label.classList.add('focus') }
-    },
-    setFocusClass () {
-      this.$refs.label.classList.add('focus')
-    },
-    setBlurClass () {
-      if (!this.value) { this.$refs.label.classList.remove('focus') }
+      default: null
     }
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-.field {
-  margin-bottom: 1em;
-  position: relative;
-
-  & label {
-    position: absolute;
-    transition: transform 0.2s ease-out;
-    top: 1rem;
-    left: 0.75rem;
-    line-height: 1.2;
-    transform-origin: 0 0;
-
-    &.focus {
-      transform: scale(0.7) translateY(-1em);
-    }
-  }
-}
-</style>
