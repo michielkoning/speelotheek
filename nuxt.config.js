@@ -83,11 +83,11 @@ export default {
         iso: 'nl-NL',
         file: 'nl.js'
       }
-
     ],
     lazy: true,
     langDir: 'locales/',
     rootRedirect: 'nl'
+
   },
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_GOOGLE_ANALYTICS_KEY,

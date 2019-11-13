@@ -10,7 +10,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('lid-worden')">
+        <nuxt-link :to="localePath('become-member')">
           <span class="title">lid worden</span>
         </nuxt-link>
       </li>
@@ -20,7 +20,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('vrijwilligers')">
+        <nuxt-link :to="localePath('volunteers')">
           <span class="title">vrijwilligers</span>
         </nuxt-link>
       </li>

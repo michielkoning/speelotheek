@@ -10,7 +10,7 @@
 export default {
   async asyncData ({ app }) {
     const locale = app.i18n.locale
-    const text = await require(`~/assets/content/pages/${locale}/lid-worden.json`)
+    const text = await require(`~/assets/content/pages/${locale}/vrijwilligers.json`)
     return {
       text
     }
@@ -18,6 +18,12 @@ export default {
   head () {
     return {
       title: this.text.title
+    }
+  },
+  nuxtI18n: {
+    paths: {
+      en: '/volunteers',
+      nl: '/vrijwilligers'
     }
   }
 }

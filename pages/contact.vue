@@ -25,6 +25,12 @@ export default {
     return {
       title: this.text.title
     }
+  },
+  nuxtI18n: {
+    paths: {
+      en: '/contact',
+      nl: '/contact'
+    }
   }
 }
 </script>

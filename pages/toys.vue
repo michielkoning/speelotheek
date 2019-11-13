@@ -41,6 +41,13 @@ export default {
     return {
       title: this.$t('pages.home.title')
     }
+  },
+  nuxtI18n: {
+    paths: {
+      en: '/toys',
+      nl: '/speelgoed'
+    }
   }
+
 }
 </script>
