@@ -39,6 +39,13 @@ collections:
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
   - label: "Pages (en)"
     name: "pages-en"
     editor:
@@ -72,3 +79,10 @@ collections:
         fields:
           - {label: "Titel", name: "title", widget: "string"}
           - {label: "Tekst", name: "body", widget: "markdown"}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}

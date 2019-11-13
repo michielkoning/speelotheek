@@ -1,6 +1,7 @@
 {
-  "name": "turbosolutions",
+  "name": "speelotheekwageningen",
   "version": "1.0.0",
+  "homepage": "https://www.speelotheekwageningen.nl",
   "private": true,
   "description": "See our gamechaginging turbocharger service in action",
   "author": "Michiel Koning",
@@ -50,7 +51,6 @@
     "nuxt-svg-loader": "^1.0.1",
     "postcss-mixins": "^6.2.3",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^1.19.1",
     "vue-cli-plugin-i18n": "^0.6.0",
     "vue-jest": "^3.0.5"
   }

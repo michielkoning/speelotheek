@@ -66,9 +66,6 @@ export default {
   /*
    ** Axios module configuration
    */
-  axios: {
-    baseURL: baseUrl
-  },
   i18n: {
     baseUrl,
     strategy: 'prefix',
@@ -142,7 +139,7 @@ export default {
     }
   },
   sitemap: {
-    hostname: baseUrl
+    hostname: pkg.homepage
   },
   markdownit: {
     injected: true
