@@ -70,17 +70,14 @@ export default {
 
 <style lang="postcss" scoped>
 header {
-  background: var(--color-primary);
-  position: relative;
+  @mixin color-negative;
 }
 
 .header-wrapper {
-  display: flex;
   @mixin center;
 }
 
 .content {
-  @mixin color-negative;
   padding: 5em var(--gutter) var(--gutter);
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -88,14 +85,10 @@ header {
 
   @media (--show-full-navigation) {
     padding: 0 var(--gutter) 0 0;
-    flex-direction: column;
     overflow: visible;
     transform: translateY(0);
-    display: flex !important;
-    align-items: flex-end;
+    display: block !important;
     max-height: none;
-    justify-content: space-around;
-    flex: 1 0 auto;
   }
 }
 
@@ -126,7 +119,7 @@ header {
     position: static;
     padding: 0;
     overflow: visible;
-    display: flex !important;
+    display: block !important;
   }
 }
 

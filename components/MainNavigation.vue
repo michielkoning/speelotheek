@@ -86,12 +86,6 @@ export default {
 <style lang="postcss" scoped>
 nav {
   position: relative;
-  @media (--viewport-md) {
-    font-size: 0.9em;
-  }
-  @media (--viewport-lg) {
-    font-size: 1em;
-  }
 }
 
 ul {
@@ -102,6 +96,7 @@ ul {
   @media (--show-full-navigation) {
     display: flex;
     border-top: 0;
+    justify-content: space-between;
   }
 }
 

@@ -7,7 +7,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s | Turbo Solutions Europe',
+    titleTemplate: '%s | Speel-o-theek Wageningen',
     meta: [
       { charset: 'utf-8' },
       {
