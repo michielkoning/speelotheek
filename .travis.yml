@@ -4,5 +4,3 @@ node_js:
 cache: npm
 script:
   - npm run test:build
-after_script:
-  - cat ./coverage/lcov.info | coveralls
