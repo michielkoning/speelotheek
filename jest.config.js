@@ -14,6 +14,5 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue'
-  ],
-  coverageReporters: ['lcov', 'text-summary']
+  ]
 }
