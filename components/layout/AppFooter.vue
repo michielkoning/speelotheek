@@ -59,7 +59,7 @@ footer {
 }
 
 .wrapper {
-  @mixin center var(--container-width-lg);
+  @mixin center;
   padding-top: 3em;
   padding-bottom: 3em;
   display: grid;
