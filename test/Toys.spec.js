@@ -64,11 +64,29 @@ describe('Toys', () => {
       expect(toys.length).toBe(wrapper.vm.allToys.length)
     })
   })
+  describe('filterToysByCategory', () => {
+    it('filterToysByCategory', () => {
+      const categories = []
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys).toBe(mockToys)
+    })
+    it('filterToysByCategory', () => {
+      const categories = ['P']
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys[0].category).toBe('P')
+    })
+    it('filterToysByCategory', () => {
+      const categories = ['G', 'P']
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys[0].category).toBe('G')
+      expect(toys[1].category).toBe('P')
+    })
+  })
   describe('filterToys', () => {
     it('searchFor', () => {
-      wrapper.vm.filterToys()
-      wrapper.vm.filterToysByCategory = jest.fn()
-      expect(wrapper.vm.filterToysByCategory).toBeCalled()
+      // wrapper.vm.filterToys()
+      // wrapper.vm.filterToysByCategory = jest.fn()
+      // expect(wrapper.vm.filterToysByCategory).toBeCalled()
     })
   })
 })
