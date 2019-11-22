@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <app-article title="Speelgoed">
     <input v-model="search" type="search" @input="filterToys">
     <input
       id="filter-g"
@@ -21,13 +21,16 @@
     <label for="filter-p">P</label>
     {{ selectedCategories }}
     <toys-list :toys="toys" />
-  </div>
+  </app-article>
 </template>
 
 <script>
 import ToysList from '@/components/toys/ToysList.vue'
+import AppArticle from '@/components/layout/AppArticle.vue'
+
 export default {
   components: {
+    AppArticle,
     ToysList
   },
   async asyncData () {
@@ -42,28 +45,24 @@ export default {
       allToys: []
     }
   },
-  computed: {
-    blogPosts () {
-      return this.$store.state.blogPosts
-    }
-  },
   mounted () {
     this.allToys = this.toys || []
   },
   methods: {
-    searchFor () {
-      this.filterToys()
-    },
     filterToys () {
-      this.toys = this.allToys
-      if (this.selectedCategories.length) {
-        this.toys = this.allToys.filter(item => this.selectedCategories.includes(item.category))
-      }
-      this.toys = this.toys.filter(item =>
-        item.title.toLowerCase().includes(this.search.toLowerCase())
-      )
+      let toys = this.allToys
+      toys = this.filterToysByCategory(toys, this.selectedCategories)
+      toys = this.filterToysBySearchTerm(toys, this.search)
+      this.toys = toys
+    },
+    filterToysByCategory (toys, categories) {
+      if (!categories.length) { return toys }
+      return toys.filter(item => categories.includes(item.category))
+    },
+    filterToysBySearchTerm (toys, term) {
+      return toys.filter(item =>
+        item.title.toLowerCase().includes(term.toLowerCase()))
     }
-
   },
 
   head () {

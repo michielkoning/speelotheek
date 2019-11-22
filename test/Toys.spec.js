@@ -2,65 +2,91 @@ import { shallowMount } from '@vue/test-utils'
 import Toys from '@/pages/toys.vue'
 
 let wrapper
+const mockToys = [
+  {
+    title: '(T)weetjes Jacht memory 3 combi Puzzel',
+    category: 'G'
+  },
+  {
+    title: '3D puzzel',
+    category: 'P'
+  },
+  {
+    title: 'Aankleedpop',
+    category: 'P'
+  },
+  {
+    title: 'ABC -spel',
+    category: 'F'
+  }
+]
 
 beforeEach(() => {
   wrapper = shallowMount(Toys, {
     data () {
       return {
-        toys: [
-          {
-            title: '(T)weetjes Jacht memory 3 combi Puzzel',
-            category: 'G'
-          },
-          {
-            title: '3D puzzel',
-            category: 'P'
-          },
-          {
-            title: 'Aankleedpop',
-            category: 'P'
-          },
-          {
-            title: 'ABC -spel',
-            category: 'F'
-          }
-        ]
+        toys: mockToys
       }
     }
   })
 })
 
 describe('Toys', () => {
-  describe('searchFor', () => {
+  describe('filterToysBySearchTerm', () => {
     it('finds toys when the searchterm starts with the title of a toy', () => {
-      wrapper.vm.search = 'Aankleed'
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
+      const search = 'Aankleed'
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys[0].title).toBe('Aankleedpop')
     })
     it('finds toys when the searchterm starts with the title of a toy case insensitive', () => {
-      wrapper.vm.search = 'aankleed'
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
+      const search = 'aankleed'
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys[0].title).toBe('Aankleedpop')
     })
     it('finds toys when the searchterm includes letters of a title of a toy in the middle of the searchterm', () => {
-      wrapper.vm.search = 'kleed'
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys[0].title).toBe('Aankleedpop')
+      const search = 'kleed'
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys[0].title).toBe('Aankleedpop')
     })
     it('searchFor', () => {
-      wrapper.vm.search = 'áánkleed'
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys.length).toBe(0)
-    })
-    it('searchFosr', () => {
-      wrapper.vm.search = 'test zonder resultaten'
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys.length).toBe(0)
+      const search = 'áánkleed'
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys.length).toBe(0)
     })
     it('searchFor', () => {
-      wrapper.vm.search = ''
-      wrapper.vm.searchFor()
-      expect(wrapper.vm.toys.length).toBe(wrapper.vm.allToys.length)
+      const search = 'test zonder resultaten'
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys.length).toBe(0)
+    })
+    it('searchFor', () => {
+      const search = ''
+      const toys = wrapper.vm.filterToysBySearchTerm(mockToys, search)
+      expect(toys.length).toBe(wrapper.vm.allToys.length)
+    })
+  })
+  describe('filterToysByCategory', () => {
+    it('filterToysByCategory', () => {
+      const categories = []
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys).toBe(mockToys)
+    })
+    it('filterToysByCategory', () => {
+      const categories = ['P']
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys[0].category).toBe('P')
+    })
+    it('filterToysByCategory', () => {
+      const categories = ['G', 'P']
+      const toys = wrapper.vm.filterToysByCategory(mockToys, categories)
+      expect(toys[0].category).toBe('G')
+      expect(toys[1].category).toBe('P')
+    })
+  })
+  describe('filterToys', () => {
+    it('searchFor', () => {
+      // wrapper.vm.filterToys()
+      // wrapper.vm.filterToysByCategory = jest.fn()
+      // expect(wrapper.vm.filterToysByCategory).toBeCalled()
     })
   })
 })

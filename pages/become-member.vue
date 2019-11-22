@@ -1,5 +1,5 @@
 <template>
-  <app-article :text="text" />
+  <app-article :title="text.title" :body="text.body" />
 </template>
 
 <script>

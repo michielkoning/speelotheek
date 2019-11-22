@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <h1>{{ text.title }}</h1>
-    <!-- eslint-disable-next-line -->
-    <div v-html="$md.render(text.body)" />
+  <app-article title="Contact">
     <form-contact />
-  </div>
+  </app-article>
 </template>
 
 <script>
+import AppArticle from '@/components/layout/AppArticle.vue'
 import FormContact from '@/components/FormContact.vue'
-
 export default {
   components: {
+    AppArticle,
     FormContact
   },
   async asyncData ({ app }) {

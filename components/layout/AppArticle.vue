@@ -1,17 +1,22 @@
 <template>
   <article :class="$style.article">
-    <h1>{{ text.title }}</h1>
+    <h1>{{ title }}</h1>
     <!-- eslint-disable-next-line -->
-    <div v-html="$md.render(text.body)" />
+    <div v-if="body" v-html="$md.render(body)" />
+    <slot />
   </article>
 </template>
 
 <script>
 export default {
   props: {
-    text: {
-      type: Object,
+    title: {
+      type: String,
       required: true
+    },
+    body: {
+      type: String,
+      default: null
     }
   }
 }
